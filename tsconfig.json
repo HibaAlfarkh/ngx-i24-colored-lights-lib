@@ -11,6 +11,12 @@
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
+    "paths": {
+      "ngx-i24-colored-lights": [
+        "dist/ngx-i24-colored-lights/ngx-i24-colored-lights",
+        "dist/ngx-i24-colored-lights"
+      ]
+    },
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
