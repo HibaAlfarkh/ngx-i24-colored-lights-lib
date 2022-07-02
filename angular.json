@@ -33,6 +33,109 @@
           }
         }
       }
+    },
+    "colored-lights-demo": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/colored-lights-demo",
+      "sourceRoot": "projects/colored-lights-demo/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/colored-lights-demo",
+            "index": "projects/colored-lights-demo/src/index.html",
+            "main": "projects/colored-lights-demo/src/main.ts",
+            "polyfills": "projects/colored-lights-demo/src/polyfills.ts",
+            "tsConfig": "projects/colored-lights-demo/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/colored-lights-demo/src/favicon.ico",
+              "projects/colored-lights-demo/src/assets"
+            ],
+            "styles": [
+              "projects/colored-lights-demo/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/colored-lights-demo/src/environments/environment.ts",
+                  "with": "projects/colored-lights-demo/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "colored-lights-demo:build:production"
+            },
+            "development": {
+              "browserTarget": "colored-lights-demo:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "colored-lights-demo:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/colored-lights-demo/src/test.ts",
+            "polyfills": "projects/colored-lights-demo/src/polyfills.ts",
+            "tsConfig": "projects/colored-lights-demo/tsconfig.spec.json",
+            "karmaConfig": "projects/colored-lights-demo/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/colored-lights-demo/src/favicon.ico",
+              "projects/colored-lights-demo/src/assets"
+            ],
+            "styles": [
+              "projects/colored-lights-demo/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-i24-colored-lights"
