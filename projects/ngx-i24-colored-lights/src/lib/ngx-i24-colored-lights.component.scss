@@ -1,5 +1,12 @@
-/* Font */
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+.container{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	font-family: 'Montserrat', sans-serif;
+	background-image: linear-gradient(#0A0707 0%, #110C0D 50%, #0C090A 100%);
+}
 
 /* Colors */
 $colorCollection: (#D00010, #FEC641, #63C13B, #FE0016, #5C6C94, #6B0D05, #7D0006, #DB1913, #FEE34A, #2F8A27);
@@ -20,7 +27,7 @@ $blurLevel: 2;
 	height: 100%;
 	pointer-events: none;
 	top: -50px;
-  left: -25px;
+  	left: -25px;
 }
 
 .light{
@@ -68,16 +75,6 @@ $blurLevel: 2;
 
 
 /* Other Stuff */
-body, html{
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	font-family: 'Montserrat', sans-serif;
-	background-image: linear-gradient(#0A0707 0%, #110C0D 50%, #0C090A 100%);
-}
-
 h1 {
 	text-align: center;
 	text-transform: uppercase;

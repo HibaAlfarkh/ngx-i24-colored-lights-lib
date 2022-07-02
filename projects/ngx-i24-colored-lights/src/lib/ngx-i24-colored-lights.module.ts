@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { NgxI24ColoredLightsComponent } from './ngx-i24-colored-lights.component';
-
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -8,6 +8,7 @@ import { NgxI24ColoredLightsComponent } from './ngx-i24-colored-lights.component
     NgxI24ColoredLightsComponent
   ],
   imports: [
+    CommonModule
   ],
   exports: [
     NgxI24ColoredLightsComponent
