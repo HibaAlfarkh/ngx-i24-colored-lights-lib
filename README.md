@@ -1,27 +1,72 @@
 # NgxI24ColoredLightsLib
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
+ A lightweight plugin to render a simple, animated colored lighted cover.
+ 
+## Features
+[![](https://stackblitz.com/edit/ngx-i24-colored-lights-demo)
 
-## Development server
+* highly customizable
+* very easy to implement
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Demo
+[![](https://raw.githubusercontent.com/HibaAlfarkh/ngx-i24-colored-lights-lib/blob/master/demo/images/lights.png)](https://stackblitz.com/edit/ngx-i24-colored-lights-demo)
+* [Link](https://stackblitz.com/edit/ngx-i24-colored-lights-demo)
 
-## Code scaffolding
+## Get started
+#### Installation
+```
+$ npm i ngx-i24-colored-lights
+```
+#### Example
+##### TS
+###### Module
+```typescript 
+import { NgxI24ColoredLightsModule } from 'ngx-i24-colored-lights';
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+@NgModule({
+  imports:      [ BrowserModule, FormsModule,NgxI24ColoredLightsModule ],
+  declarations: [ AppComponent, HelloComponent ],
+  bootstrap:    [ AppComponent ]
+})
+export class AppModule { }
+```
+ ###### Component
+ ```typescript 
+import { Component, VERSION } from '@angular/core';
 
-## Build
+@Component({
+  selector: 'my-app',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+})
+export class AppComponent {
+  colorCollection = ['#e7e984', '#6bbada', '#e98b84'];
+  lights = 30;
+  textColor = '#FFFFFF';
+  lightSize = 50;
+  blurLevel = 3;
+  text = '';
+  imageUrl =
+    'https://raw.githubusercontent.com/HibaAlfarkh/ngx-i24-colored-lights-lib/master/projects/colored-lights-demo/src/assets/street.jpg';
+}
+```
+##### HTML
+```html 
+<i24-colored-lights
+  [colorCollection]="colorCollection"
+  [lightsCount]="lights"
+  [lightSize]="lightSize"
+  [blurLevel]="blurLevel"
+  [title]="text"
+  [imageUrl]="imageUrl"
+></i24-colored-lights>
+``` 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Options
 
-## Running unit tests
+| Property (Type) | Default | Description|
+| - | - | - |
+| lightsCount | 100 | The count of the lights |
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Copyright
+Copyright (c) 2022 Hiba Alfarkh, contributors. Released under the MIT
