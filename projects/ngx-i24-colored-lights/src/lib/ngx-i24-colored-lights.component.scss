@@ -1,3 +1,5 @@
+$textColor: #FFFFFF;
+
 .container{
 	margin: 0;
 	padding: 0;
@@ -5,22 +7,9 @@
 	height: 100%;
 	overflow: hidden;
 	font-family: 'Montserrat', sans-serif;
-	background-image: linear-gradient(#0A0707 0%, #110C0D 50%, #0C090A 100%);
+	background-size: cover;
 }
 
-/* Colors */
-$colorCollection: (#D00010, #FEC641, #63C13B, #FE0016, #5C6C94, #6B0D05, #7D0006, #DB1913, #FEE34A, #2F8A27);
-// $colorCollection: (#F4A43B, #0AB1AA, #FDFEE4, #F42618, #ADFEDD, #FF5F24, #FEF14F, #FD361B, #30398D, #FEE086);
-// $colorCollection: (#FCF1BD);
-
-/* Config */
-$lights: 150; // match lights in mark up
-$textColor: #FFFFFF;
-$totalAnimation: 5;
-$lightSize: 75;
-$blurLevel: 2;
-
-/* Pretty Lights */
 .bokeh{
 	position: relative;
 	width: 100%;
@@ -34,29 +23,11 @@ $blurLevel: 2;
 	position: absolute;
 	border-radius: 50%;
 	opacity: 0;
+	animation-timing-function:linear;
+	animation-iteration-count: infinite;
 }
 
-@for $i from 1 through $lights{
-	$lightWidth: $lightSize + random(25);
-	$lightHeight: $lightWidth;
-	$lightVertical: random(100);
-	$lightHorizontal: random(100);
-	$lightBlur: $blurLevel + random($blurLevel);
-	$lightDelay: 10 + random(25);
-	$animation: 1 + random($totalAnimation);
-
-	.light:nth-child(#{$i}){
-		width: $lightWidth + px;
-		height: $lightHeight + px;
-		top: #{$lightVertical + "%"};
-		left: #{$lightHorizontal + "%"};
-		background: nth($colorCollection, random(length($colorCollection)));
-     filter: blur($lightBlur + px);
-		animation: #{$lightDelay + s} #{"light" + $animation} linear infinite;
-	}
-}
-
-@for $i from 1 through $totalAnimation{
+@for $i from 1 through 10{
 	@keyframes light#{$i} {
 		25%{
 			opacity: (25 + random(50)) * 0.01;
@@ -73,8 +44,6 @@ $blurLevel: 2;
 	}
 }
 
-
-/* Other Stuff */
 h1 {
 	text-align: center;
 	text-transform: uppercase;

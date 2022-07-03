@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'colored-lights-demo';
+   colorCollection = ['#e7e984', '#6bbada','#e98b84'];
+	lights= 30;
+	textColor= '#FFFFFF';
+	 lightSize=50;
+	blurLevel=3;
+  text = "Happy Birthday"
+  imageUrl ="/assets/street.jpg"
 }
