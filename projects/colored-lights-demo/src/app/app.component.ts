@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
    colorCollection = ['#e7e984', '#6bbada','#e98b84'];
-	lights= 30;
+	lights= 100;
 	textColor= '#FFFFFF';
 	 lightSize=50;
 	blurLevel=3;

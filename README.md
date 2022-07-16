@@ -3,13 +3,11 @@
  A lightweight plugin to render a simple, animated colored lighted cover.
  
 ## Features
-[![](https://stackblitz.com/edit/ngx-i24-colored-lights-demo)
-
 * highly customizable
 * very easy to implement
 
 ## Demo
-[![](https://raw.githubusercontent.com/HibaAlfarkh/ngx-i24-colored-lights-lib/blob/master/demo/images/lights.png)](https://stackblitz.com/edit/ngx-i24-colored-lights-demo)
+![](https://raw.githubusercontent.com/HibaAlfarkh/ngx-i24-colored-lights-lib/blob/master/demo/images/lights.png)](https://stackblitz.com/edit/ngx-i24-colored-lights-demo)
 * [Link](https://stackblitz.com/edit/ngx-i24-colored-lights-demo)
 
 ## Get started
