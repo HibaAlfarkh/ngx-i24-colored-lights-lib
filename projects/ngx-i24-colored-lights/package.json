@@ -1,11 +1,30 @@
 {
   "name": "ngx-i24-colored-lights",
-  "version": "0.0.3",
+  "version": "0.0.4",
+  "description": " A lightweight plugin to render a simple, animated colored lighted cover.",
+  "author": {
+    "name": "HIBA ALFARKH",
+    "url": "https://icode24.com/"
+  },
+  "homepage": "https://github.com/HibaAlfarkh/ngx-i24-colored-lights-lib",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HibaAlfarkh/ngx-i24-colored-lights-lib"
+  },
   "peerDependencies": {
     "@angular/common": "^12.1.0",
     "@angular/core": "^12.1.0"
   },
   "dependencies": {
     "tslib": "^2.2.0"
-  }
+  },
+  "license": "MIT",
+  "keywords": [
+    "colored lights",
+    "lights",
+    "angular",
+    "ngx",
+    "icode24",
+    "i24"
+  ]
 }
